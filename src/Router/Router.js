@@ -3,6 +3,7 @@ import Confession from "../Components/Confession";
 import Home from "../Components/Home";
 import Misdemeanour from "../Components/Misdemeanour";
 import MainLayout from "../Layouts/mainLayout";
+import NotFound from "../Components/NotFound";
 
 const Router = () =>
     <Routes>
@@ -10,7 +11,7 @@ const Router = () =>
             <Route path="/" element={<Home />} />
             <Route path="/misdemeanour" element={<Misdemeanour />} />
             <Route path="/confession" element={<Confession />} />
-            <Route path="/*" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
     
     </Routes >;
 
