@@ -3,11 +3,9 @@ import Nav from './Nav';
 
 const Header = () => {
     return (
-        <div className="header">
-            <h3>Fakelander Justice System</h3>
-            <div class="topnav header-right">
-                <Nav />
-            </div>
+        <div className="header topnav">
+            <h2>Fakelandia Justice System </h2> 
+            <Nav />
         </div>
     )
 }

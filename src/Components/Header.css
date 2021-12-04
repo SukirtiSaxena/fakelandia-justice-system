@@ -9,15 +9,11 @@
     color: #fff;
   }
 
-  .header-right {
-    float: right;
-    align-items: flex-end;
-  }
-
   .topnav a {
     float: left;
+    width: 20%;
     color: #f2f2f2;
-    padding: 16px 18px;
+    padding: 12px 14px;
     text-decoration: none;
     font-size: 17px;
   }
