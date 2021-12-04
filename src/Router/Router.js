@@ -7,12 +7,12 @@ import NotFound from "../Components/NotFound";
 
 const Router = () =>
     <Routes>
-      
-            <Route path="/" element={<Home />} />
-            <Route path="/misdemeanour" element={<Misdemeanour />} />
-            <Route path="/confession" element={<Confession />} />
+        <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />} />
+            <Route path="misdemeanour" element={<Misdemeanour />} />
+            <Route path="confession" element={<Confession />} />
             <Route path="*" element={<NotFound />} />
-    
+     </Route>
     </Routes >;
 
 export default Router;

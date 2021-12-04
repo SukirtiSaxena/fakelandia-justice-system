@@ -1,14 +1,16 @@
-import Footer from "../Components/Footer"
-import Header from "../Components/Header"
-import Home from "../Components/Home"
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+import { Outlet } from "react-router";
 
 const MainLayout = () =>
     <>
-        <Header/>
-        <main style={{flex:'1'}}>
-            <Home/>
-        </main>
-        <Footer/>
+        <Header />
+        <Outlet/>
+        <p>Welcome to the home of the Justice Department of Fakelandia.</p>
+        <p>Here you can browse a list of recent misdemeanours committed by our citizens, or
+            you can confess to your own misdemeanour.
+        </p>
+        <Footer />
     </>;
 
 export default MainLayout;
