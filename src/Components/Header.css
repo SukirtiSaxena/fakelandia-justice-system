@@ -1,21 +1,23 @@
 
-.Header {
+.header {
     box-sizing: border-box;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
+    display:inline-block;
     padding: 1em;
     margin-bottom: 2em;
     background-color: rgb(43, 131, 94);
     color: #fff;
   }
 
+  .header-right {
+    float: right;
+    align-items: flex-end;
+  }
+
   .topnav a {
     float: left;
     color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 16px 18px;
     text-decoration: none;
     font-size: 17px;
   }
