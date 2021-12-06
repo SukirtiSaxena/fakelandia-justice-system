@@ -2,12 +2,12 @@ import { useContext, useState } from "react";
 import MisdemeanourCard from "./MisdemeanourCard";
 import DropDownMisdemeanour from "./DropDownMisdemeanour"
 import "./Misdemeanour.css";
-import { misdemeanourContext } from "../App";
+import { misdemeanourContext } from "../../App";
 
 const Misdemeanour = () => {
 
    const [misdemeanour, setMisdemeanour] = useContext(misdemeanourContext);
-   const [filterValue, setFilterValue] = useState('');
+   const [filterValue, setFilterValue] = useState('Misdemeanours');
 
    return (
       <div>
