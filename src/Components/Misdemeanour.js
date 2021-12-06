@@ -1,6 +1,7 @@
 import { useState } from "react";
 import generateMisdemeanours from "../Docs/generate_misdemeanours"
 import MisdemeanourCard from "./MisdemeanourCard";
+import "./Misdemeanour.css";
 
 const Misdemeanour = () => {
    const [Misdemeanour, setMisdemeanour] = useState([generateMisdemeanours()]);
@@ -31,12 +32,27 @@ const Misdemeanour = () => {
    }
 
    ];
+   
    return (
       <div>
          <h3>Misdemeanour</h3>
-         {obj.map(o=>{
-            return <MisdemeanourCard id={o.citizenId} date={o.date} misdemeanour={o.misdemeanour} />
-         })}
+         <table> 
+            <tr >
+               <th style={{width: '25%'}}>Citizen ID </th>
+               <th style={{width: '25%'}}>Date </th>
+               <th style={{width: '25%'}}> Misdemeanour </th>
+               <th style={{width: '25%'}}> Punishment Idea </th>
+            </tr>
+            
+               {obj.map(o => {
+                  return <MisdemeanourCard citizenId={o.citizenId}
+                     date={o.date}
+                     misdemeanour={o.misdemeanour}
+                     punishmentIdea="Eat Junk Food"
+                  />
+               })}
+            
+         </table>
       </div>
    )
 };
