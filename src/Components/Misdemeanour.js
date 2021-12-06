@@ -1,21 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useContext } from "react";
 import generateMisdemeanours from "../Docs/generate_misdemeanours"
 import MisdemeanourCard from "./MisdemeanourCard";
 import "./Misdemeanour.css";
+import { misdemeanourContext } from "../App";
 
 const Misdemeanour = () => {
-   const [misdemeanour, setMisdemeanour] = useState([]);
 
-   useEffect(() => {
-      getData()
-   }, [])
-
-   const getData = async () => {
-      const response = await generateMisdemeanours();
-      setMisdemeanour(response);
-   }
-
-   console.log("misdemeanour", misdemeanour);
+   const [misdemeanour, setMisdemeanour] = useContext(misdemeanourContext);
 
    return (
       <div>
