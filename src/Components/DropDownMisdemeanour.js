@@ -1,12 +1,12 @@
 
-const DropDownMisdemeanour = () => {
+const DropDownMisdemeanour = ({ onChangeFilterValue }) => {
     return (
-        <select >
-            <option selected value="Misdemeanour" >Misdemeanours</option>
-            <option value="option_1">united</option>
-            <option value="option_2">vegetables</option>
-            <option value="option_3">rudeness</option>
-            <option value="option_4">lift</option>
+        <select onChange={(e) => onChangeFilterValue(e.target.value)}>
+            <option defaultValue="misdemeanour" >Misdemeanours</option>
+            <option value="united">united</option>
+            <option value="vegetables">vegetables</option>
+            <option value="rudeness">rudeness</option>
+            <option value="lift">lift</option>
         </select>
     )
 };
