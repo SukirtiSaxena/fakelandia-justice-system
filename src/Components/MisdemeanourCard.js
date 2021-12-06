@@ -11,10 +11,10 @@ const MisdemeanourCard = ({ citizenId, date, misdemeanour }) => {
          </td>
          <td>
             {misdemeanour}
-            <Emoji misdemeanour={misdemeanour}/>
+            <Emoji misdemeanour={misdemeanour} />
          </td>
          <td>
-            <img src='https://picsum.photos/100' alt="random Punishment"/>
+            <img src='https://picsum.photos/100' alt="random Punishment" />
          </td>
       </tr>
    )

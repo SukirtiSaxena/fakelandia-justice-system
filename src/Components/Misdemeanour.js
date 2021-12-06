@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback, useContext } from "react";
-import generateMisdemeanours from "../Docs/generate_misdemeanours"
+import { useContext } from "react";
 import MisdemeanourCard from "./MisdemeanourCard";
+import DropDownMisdemeanour from "./DropDownMisdemeanour"
 import "./Misdemeanour.css";
 import { misdemeanourContext } from "../App";
 
@@ -16,7 +16,7 @@ const Misdemeanour = () => {
                <tr >
                   <th style={{ width: '25%' }}>Citizen ID </th>
                   <th style={{ width: '25%' }}>Date </th>
-                  <th style={{ width: '25%' }}> Misdemeanour </th>
+                  <th style={{ width: '25%' }}> <DropDownMisdemeanour /> </th>
                   <th style={{ width: '25%' }}> Punishment Idea </th>
                </tr>
             </thead>
