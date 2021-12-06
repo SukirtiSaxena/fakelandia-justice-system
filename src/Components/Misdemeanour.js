@@ -37,21 +37,22 @@ const Misdemeanour = () => {
       <div>
          <h3>Misdemeanour</h3>
          <table> 
+            <thead>
             <tr >
                <th style={{width: '25%'}}>Citizen ID </th>
                <th style={{width: '25%'}}>Date </th>
                <th style={{width: '25%'}}> Misdemeanour </th>
                <th style={{width: '25%'}}> Punishment Idea </th>
             </tr>
-            
+            </thead>
+            <tbody>
                {obj.map(o => {
-                  return <MisdemeanourCard citizenId={o.citizenId}
+                  return <MisdemeanourCard key={o.citizenId} citizenId={o.citizenId}
                      date={o.date}
                      misdemeanour={o.misdemeanour}
-                     punishmentIdea="Eat Junk Food"
                   />
                })}
-            
+            </tbody>
          </table>
       </div>
    )

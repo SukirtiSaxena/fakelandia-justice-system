@@ -1,17 +1,16 @@
 
 const Emoji = ({ misdemeanour }) => {
-
-    return (
+    let emoji = '';
+    switch (misdemeanour) {
+        case 'lift': emoji = '🗣'; break;
+        case 'rudeness': emoji = '🤪'; break;
+        case 'united': emoji = '😈'; break;
+        case 'vegetables': emoji = '🥗'; break;
+        default: emoji = '';
+    };
+     return (
         <>
-        {(()=>{
-                switch ({misdemeanour}) {
-                    case "lift": return '🗣';
-                        case "rudeness": return '🤪';
-                        case "united": return '😈';
-                        case "vegetables": return '🥗';
-                        default: return null;
-                };
-        })}
+            {emoji}
         </>
     )
 };

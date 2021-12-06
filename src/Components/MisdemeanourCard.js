@@ -1,6 +1,6 @@
 import Emoji from "./Emoji";
 
-const MisdemeanourCard = ({ citizenId, date, misdemeanour, punishmentIdea }) => {
+const MisdemeanourCard = ({ citizenId, date, misdemeanour }) => {
    return (
       <tr>
          <td>
@@ -14,8 +14,7 @@ const MisdemeanourCard = ({ citizenId, date, misdemeanour, punishmentIdea }) => 
             <Emoji misdemeanour={misdemeanour}/>
          </td>
          <td>
-            {punishmentIdea}
-            <img src='https://picsum.photos/10px/10px' alt="random Punishment"/>
+            <img src='https://picsum.photos/100' alt="random Punishment"/>
          </td>
       </tr>
    )
