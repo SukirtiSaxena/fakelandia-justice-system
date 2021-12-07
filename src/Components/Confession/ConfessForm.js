@@ -7,7 +7,7 @@ const ConfessForm = () => {
     const [reason, setReason] = useState('');
     const [message, setMessage] = useState('');
     const [subject, setSubject] = useState('');
-    const [disable,setDisable] = useState('true');
+    const [disable, setDisable] = useState('true');
 
 
     const handleSubmit = (e) => {
@@ -23,7 +23,7 @@ const ConfessForm = () => {
                 misdemeanour: subject
             });
         }
- 
+
     }
 
     const newMisdemeanour = (misdemeanour) => {
@@ -64,7 +64,7 @@ const ConfessForm = () => {
 
             </form>
             <p>
-               <h3> {message} </h3>
+                <h3> {message} </h3>
             </p>
         </>
     )
