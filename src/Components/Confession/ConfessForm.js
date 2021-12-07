@@ -6,11 +6,13 @@ const ConfessForm = () => {
     const [misdemeanour, setMisdemeanour] = useContext(misdemeanourContext);
     const [reason, setReason] = useState('');
     const [message, setMessage] = useState('');
-    const [subject,setSubject] =useState('');
+    const [subject, setSubject] = useState('');
+    const [disable,setDisable] = useState('true');
 
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        setDisable(true);
         if (reason === "talk")
             setMessage(`Welcome Citizen!! You want to talk about ${subject}`);
         else {
@@ -21,7 +23,7 @@ const ConfessForm = () => {
                 misdemeanour: subject
             });
         }
-
+ 
     }
 
     const newMisdemeanour = (misdemeanour) => {
@@ -34,12 +36,17 @@ const ConfessForm = () => {
             <form >
                 <p>
                     <label htmlFor="subject"> Subject: </label>
-                    <input type="text" id="subject" size="20" onChange={e=>{setSubject(e.target.value)}}/>
+                    <input type="text" id="subject" size="20"
+                        onChange={e => {
+                            setSubject(e.target.value);
+                            setDisable(false);
+                        }}
+                    />
                 </p>
                 <p>
                     <label htmlFor="reason"> Reason for Contact: </label>
                     <select onChange={(e) => {
-                        setReason(e.target.value)
+                        setReason(e.target.value);
                     }}>
                         <option value="misdemeanour"> Misdemeanour </option>
                         <option value="talk"> I just want to talk </option>
@@ -47,15 +54,17 @@ const ConfessForm = () => {
                 </p>
                 <p>
                     <label htmlFor="reason">Explain:</label>
-                    <textarea row="4" cols="50" />
+                    <textarea />
                 </p>
                 <p>
-                    <button type="button" onClick={handleSubmit}> Confess </button>
+                    <button type="button" onClick={handleSubmit} disabled={disable}>
+                        Confess
+                    </button>
                 </p>
 
             </form>
             <p>
-                {message}
+               <h3> {message} </h3>
             </p>
         </>
     )
