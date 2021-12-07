@@ -6,8 +6,8 @@ const Confession = () => {
     return (
         <div>
             <h3>Confession</h3>
-            <p> <ConfessionPageText /> </p>
-            <ConfessForm />
+            <section> <ConfessionPageText /> </section>
+            <section> <ConfessForm /> </section>
 
         </div>
     )
